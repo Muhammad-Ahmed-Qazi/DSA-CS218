@@ -42,12 +42,13 @@ class Queue:
 # Main program
 if __name__ == '__main__':
     myQueue = Queue(5)
-    myQueue.enqueue('A')
-    myQueue.enqueue('A')
-    myQueue.enqueue('A')
-    myQueue.enqueue('A')
-    myQueue.enqueue('A')
-    myQueue.enqueue('A')
-
-    print(myQueue.items)
+    print("Is the queue empty?", myQueue.empty())  # Expected: True
+    myQueue.enqueue(10)
+    myQueue.enqueue(20)
+    print("Is the queue empty after enqueuing?", myQueue.empty())  # Expected: False
+    print("Front item:", myQueue.toq())  # Expected: 10
+    print("Dequeued item:", myQueue.dequeue())  # Expected: 10
+    print("Front item after dequeue:", myQueue.toq())  # Expected: 20
+    print("Dequeued item:", myQueue.dequeue())  # Expected: 20
+    print("Is the queue empty after dequeuing all items?", myQueue.empty())  #
 
