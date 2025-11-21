@@ -6,7 +6,7 @@ class Queue:
 
     def add_one(self, i):
         return ((i+ 1) % self.maxLength)
-    
+
     def make_null(self):
         self.front = 0
         self.rear = self.maxLength - 1
